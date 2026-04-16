@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>山西独立储能交易辅助</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>山西独立储能交易辅助（第一版）</h1>
+        <p class="subtitle">规则驱动 + 历史相似日，不接控制系统，仅生成策略建议。</p>
+      </header>
+
+      <section class="card">
+        <h2>1）上传历史 Excel 数据</h2>
+        <label class="file-picker">
+          选择历史数据文件（支持多选）
+          <input id="historyFiles" type="file" accept=".xlsx,.xls,.csv" multiple />
+        </label>
+        <div id="historySummary" class="result muted">尚未上传历史数据。</div>
+      </section>
+
+      <section class="card">
+        <h2>2）数据覆盖范围与质量检查</h2>
+        <button id="checkBtn" class="primary">执行质量检查</button>
+        <div id="checkResult" class="result muted">请先上传历史数据，再执行检查。</div>
+      </section>
+
+      <section class="card">
+        <h2>3）上传未来价格 CSV，生成明日策略建议</h2>
+        <label class="file-picker">
+          选择未来价格 CSV
+          <input id="futureFile" type="file" accept=".csv" />
+        </label>
+        <button id="generateBtn" class="primary">生成明日策略建议</button>
+        <div id="strategyResult" class="result muted">尚未生成策略建议。</div>
+      </section>
+
+      <section class="card">
+        <h2>4）导出 recommendation.csv</h2>
+        <button id="exportBtn" class="primary" disabled>导出 recommendation.csv</button>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
