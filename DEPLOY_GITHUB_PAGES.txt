@@ -1,0 +1,15 @@
+【GitHub Pages 部署步骤（最简版）】
+
+1）把本仓库代码推送到你的 GitHub 仓库。
+2）进入 GitHub 仓库页面，点击：Settings（设置）。
+3）左侧菜单点击：Pages。
+4）在 Build and deployment 区域，把 Source 设为：GitHub Actions。
+5）回到仓库顶部，点击：Actions。
+6）找到工作流：Deploy static site to GitHub Pages，点击进入。
+7）如果没有自动运行，点击：Run workflow。
+8）等待绿色对勾完成后，再回到 Pages 页面查看线上链接。
+
+说明：
+- 首页入口是 index.html。
+- 方案页：plan-a.html / plan-b.html / plan-c.html。
+- 如果你更新网页文件，push 后会自动再次部署。
