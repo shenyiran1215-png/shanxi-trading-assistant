@@ -1,49 +1,66 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>山西独立储能交易辅助</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="container">
-      <header>
-        <h1>山西独立储能交易辅助（第一版）</h1>
-        <p class="subtitle">规则驱动 + 历史相似日，不接控制系统，仅生成策略建议。</p>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>天镇储能电站对外官网原型｜方案总览</title>
+  <meta name="description" content="天镇储能电站对外官网静态原型，包含方案A、方案B、方案C。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">天镇储能电站</a>
+      <button class="menu-toggle" aria-label="展开导航">☰</button>
+      <nav class="main-nav">
+        <a href="#overview">首页</a>
+        <a href="#overview">项目概况</a>
+        <a href="#overview">电站能力</a>
+        <a href="#overview">智慧运营</a>
+        <a href="#overview">新闻动态</a>
+        <a href="#overview">关于我们</a>
+        <a href="#overview">联系我们</a>
+      </nav>
+    </div>
+  </header>
 
-      <section class="card">
-        <h2>1）上传历史 Excel 数据</h2>
-        <label class="file-picker">
-          选择历史数据文件（支持多选）
-          <input id="historyFiles" type="file" accept=".xlsx,.xls,.csv" multiple />
-        </label>
-        <div id="historySummary" class="result muted">尚未上传历史数据。</div>
-      </section>
+  <main>
+    <section class="hero hero-selection" id="overview">
+      <div class="container">
+        <p class="eyebrow">官网原型总览</p>
+        <h1>天镇储能电站对外官网<br />三套静态方案展示</h1>
+        <p class="lead">本页面用于快速选择设计方向。每个方案均为可直接双击打开的纯静态页面，文案与视觉可继续替换优化。</p>
+        <div class="scheme-grid">
+          <article class="scheme-card">
+            <div class="scheme-cover gradient-a"></div>
+            <h2>方案 A：稳重工程型</h2>
+            <p>强调基础设施质感、工程可信度与稳健叙事，适合对外展示项目实力与安全可靠形象。</p>
+            <a class="btn" href="plan-a.html">进入方案 A</a>
+          </article>
+          <article class="scheme-card">
+            <div class="scheme-cover gradient-b"></div>
+            <h2>方案 B：案例展示型</h2>
+            <p>突出案例化表达与信息卡片，强化“看得见的成果”，适合招商传播与媒体展示场景。</p>
+            <a class="btn" href="plan-b.html">进入方案 B</a>
+          </article>
+          <article class="scheme-card">
+            <div class="scheme-cover gradient-c"></div>
+            <h2>方案 C：智慧运营型</h2>
+            <p>聚焦 AI 运营与数字化监控，整体风格更科技、更数据化，适合数字能源品牌沟通。</p>
+            <a class="btn" href="plan-c.html">进入方案 C</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <section class="card">
-        <h2>2）数据覆盖范围与质量检查</h2>
-        <button id="checkBtn" class="primary">执行质量检查</button>
-        <div id="checkResult" class="result muted">请先上传历史数据，再执行检查。</div>
-      </section>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 天镇储能电站官网原型（静态演示）</p>
+      <p>建议先确定方案方向，再进行文案、图片与品牌规范细化。</p>
+    </div>
+  </footer>
 
-      <section class="card">
-        <h2>3）上传未来价格 CSV，生成明日策略建议</h2>
-        <label class="file-picker">
-          选择未来价格 CSV
-          <input id="futureFile" type="file" accept=".csv" />
-        </label>
-        <button id="generateBtn" class="primary">生成明日策略建议</button>
-        <div id="strategyResult" class="result muted">尚未生成策略建议。</div>
-      </section>
-
-      <section class="card">
-        <h2>4）导出 recommendation.csv</h2>
-        <button id="exportBtn" class="primary" disabled>导出 recommendation.csv</button>
-      </section>
-    </main>
-
-    <script src="./script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
